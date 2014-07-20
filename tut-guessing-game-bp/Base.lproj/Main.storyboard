@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="n3o-ME-zSH">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="tut_guessing_game_bp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abR-IJ-0Jx">
+                                <rect key="frame" x="14" y="107" width="446" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMd-94-Fx0">
+                                <rect key="frame" x="14" y="175" width="446" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="gSK-zp-u0F"/>
+                                </constraints>
+                                <state key="normal" title="Submit Guess">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="guess:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NdC-Xz-QJy"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3V-4f-bpc">
+                                <rect key="frame" x="14" y="250" width="446" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AMd-94-Fx0" firstAttribute="trailing" secondItem="abR-IJ-0Jx" secondAttribute="trailing" id="1T8-f0-BMk"/>
+                            <constraint firstItem="y3V-4f-bpc" firstAttribute="top" secondItem="AMd-94-Fx0" secondAttribute="bottom" constant="32" id="1e3-YC-W55"/>
+                            <constraint firstAttribute="bottom" secondItem="y3V-4f-bpc" secondAttribute="bottom" constant="20" symbolic="YES" id="3wk-RF-7DH"/>
+                            <constraint firstAttribute="trailing" secondItem="abR-IJ-0Jx" secondAttribute="trailing" constant="20" symbolic="YES" id="9T9-WX-4tw"/>
+                            <constraint firstItem="AMd-94-Fx0" firstAttribute="top" secondItem="abR-IJ-0Jx" secondAttribute="bottom" constant="38" id="AZ5-IE-hJg"/>
+                            <constraint firstItem="y3V-4f-bpc" firstAttribute="trailing" secondItem="AMd-94-Fx0" secondAttribute="trailing" id="T3u-7I-7WK"/>
+                            <constraint firstItem="AMd-94-Fx0" firstAttribute="leading" secondItem="y3V-4f-bpc" secondAttribute="leading" id="Wdu-vD-1bx"/>
+                            <constraint firstItem="abR-IJ-0Jx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="14" id="YBg-zg-SVa"/>
+                            <constraint firstItem="abR-IJ-0Jx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="43" id="dME-e7-aey"/>
+                            <constraint firstItem="abR-IJ-0Jx" firstAttribute="leading" secondItem="AMd-94-Fx0" secondAttribute="leading" id="xtV-gK-MQn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t3s-qD-1nd"/>
+                    <connections>
+                        <outlet property="inputField" destination="abR-IJ-0Jx" id="rbl-B4-6VK"/>
+                        <outlet property="output" destination="y3V-4f-bpc" id="SXp-GX-kPP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997" y="386"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pFR-Q5-UjT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n3o-ME-zSH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cR6-sQ-wfW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="v5y-Ix-1Ki"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jx-yX-VnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="386"/>
+        </scene>
+    </scenes>
+</document>
